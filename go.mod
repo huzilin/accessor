@@ -1,4 +1,4 @@
-module gitee.com/dwdcth/acccessor
+module gitee.com/dwdcth/accessor
 
 go 1.12
 

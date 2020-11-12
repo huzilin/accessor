@@ -1,4 +1,4 @@
-# acccessor
+# accessor
 
 一个简单的go generate工具，从go官方工具stringer修改而来，为结构体生成setter和getter。
 
@@ -8,7 +8,7 @@
 
 
 # 用法
-go get gitee.com/dwdcth/acccessor
+go get gitee.com/dwdcth/accessor
 添加 go:generate  accessor -type=Type1,Type2
 
 ```go
