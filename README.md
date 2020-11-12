@@ -7,7 +7,8 @@
 
 # 用法
 go get gitee.com/dwdcth/accessor
-添加 go:generate  accessor -type=Type1,Type2
+添加 go:generate  accessor -type=Type1,Type2   
+Type1,Type2表示需要生成的类型，用逗号分隔
 
 ```go
 //go:generate  accessor -type=Foo,Bar
