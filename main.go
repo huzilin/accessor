@@ -34,7 +34,7 @@ func Usage() {
 	fmt.Fprintf(os.Stderr, "\taccessor [flags] -type T [directory]\n")
 	fmt.Fprintf(os.Stderr, "\taccessor [flags] -type T files... # Must be a single package\n")
 	fmt.Fprintf(os.Stderr, "For more information, see:\n")
-	fmt.Fprintf(os.Stderr, "\thttps://pkg.go.dev/golang.org/x/tools/cmd/accessor\n")
+	fmt.Fprintf(os.Stderr, "\thttps://gitee.com/dwdcth/accessor.git\n")
 	fmt.Fprintf(os.Stderr, "Flags:\n")
 	flag.PrintDefaults()
 }
