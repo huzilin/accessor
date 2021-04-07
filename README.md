@@ -1,3 +1,5 @@
+> Fork from https://gitee.com/dwdcth/accessor.git
+
 做了一个简单的go generate工具，从go官方工具stringer修改而来，为结构体生成setter和getter。
 
 结构体中字段首字母大写默认可读可写，小写则默认只读。
@@ -6,12 +8,12 @@
 
 
 # 用法
-go get gitee.com/dwdcth/accessor
-添加 go:generate  accessor -type=Type1,Type2   
+go get github.com/huzilin/generator
+添加 go:generate accessor -type=Type1,Type2   
 Type1,Type2表示需要生成的类型，用逗号分隔
 
 ```go
-//go:generate  accessor -type=Foo,Bar
+//go:generate accessor -type=Foo,Bar
 
 package foobar
 

@@ -1,6 +1,6 @@
-module gitee.com/dwdcth/accessor
+module github.com/huzilin/generator
 
-go 1.12
+go 1.15
 
 require (
 	github.com/fatih/structtag v1.2.0

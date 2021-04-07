@@ -34,7 +34,7 @@ func Usage() {
 	fmt.Fprintf(os.Stderr, "\taccessor [flags] -type T [directory]\n")
 	fmt.Fprintf(os.Stderr, "\taccessor [flags] -type T files... # Must be a single package\n")
 	fmt.Fprintf(os.Stderr, "For more information, see:\n")
-	fmt.Fprintf(os.Stderr, "\thttps://gitee.com/dwdcth/accessor.git\n")
+	fmt.Fprintf(os.Stderr, "\thttps://github.com/huzilin/accessor.git\n")
 	fmt.Fprintf(os.Stderr, "Flags:\n")
 	flag.PrintDefaults()
 }
@@ -106,10 +106,9 @@ func isDirectory(name string) bool {
 // Generator holds the state of the analysis. Primarily used to buffer
 // the output for format.Source.
 type Generator struct {
-	buf        map[string]*bytes.Buffer // Accumulated output.
-	pkg        *Package                 // Package we are scanning.
-	structInfo map[string]StructFieldInfoArr
-	walkMark   map[string]bool
+	buf      map[string]*bytes.Buffer // Accumulated output.
+	pkg      *Package                 // Package we are scanning.
+	walkMark map[string]bool
 }
 
 func (g *Generator) Printf(structName, format string, args ...interface{}) {
@@ -181,7 +180,7 @@ func (g *Generator) generate(typeName string) {
 
 			structInfo, err := ParseStruct(file.file, file.fileSet, AccessTagName)
 			if err != nil {
-				fmt.Println("失败:" + err.Error())
+				fmt.Println("Filed:" + err.Error())
 				return
 			}
 
@@ -241,7 +240,7 @@ func ParseStruct(file *ast.File, fileSet *token.FileSet, tagName string) (struct
 			var typeNameBuf bytes.Buffer
 			err := printer.Fprint(&typeNameBuf, fileSet, field.Type)
 			if err != nil {
-				fmt.Println("获取类型失败:", err)
+				fmt.Println("Failed to get type:", err)
 				return true
 			}
 			info.Type = typeNameBuf.String()
