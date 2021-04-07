@@ -8,7 +8,8 @@
 
 
 # 用法
-go get github.com/huzilin/generator
+go get -u github.com/huzilin/accessor
+
 添加 go:generate accessor -type=Type1,Type2   
 Type1,Type2表示需要生成的类型，用逗号分隔
 
